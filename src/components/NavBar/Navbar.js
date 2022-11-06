@@ -1,14 +1,10 @@
 import React, { useState, useRef, useEffect } from "react";
-import { FaBars } from "react-icons/fa";
-import { FaSearch } from "react-icons/fa";
-import { FaTimes } from "react-icons/fa";
-import { Link } from "react-router-dom";
 import { links } from "./data";
 import logo from "./logo.png";
 
 const Navbar = () => {
   const [showLinks, setShowLinks] = useState(false);
-  const linksContainerRef = useRef(null);
+  const linksContainerRef = useRef(null); 
   const linksRef = useRef(null);
   const toggleLinks = () => {
     setShowLinks(!showLinks);
@@ -21,13 +17,19 @@ const Navbar = () => {
       linksContainerRef.current.style.height = "0px";
     }
   }, [showLinks]);
+  const [click, setClick] = useState(false);
+  const handleClick = () => setClick(!click);
   return (
     <nav>
       <div className="nav-center">
         <div className="nav-header">
           <img src={logo} className="logo" alt="logo" />
           <button className="nav-toggle" onClick={toggleLinks}>
-            <FaBars />
+            <div className="menu-icon" onClick={handleClick}>
+              <i
+                className={click ? "fas fa-times" : "fas fa-bars"}
+              ></i>
+            </div>
           </button>
         </div>
         <div className="links-container" ref={linksContainerRef}>
@@ -40,17 +42,16 @@ const Navbar = () => {
                 </li>
               );
             })}
-            <a className="links search-icon">
-              <FaSearch />
-            </a>
-            <a className="links exit-icon">
-              <FaTimes />
-            </a>
-            <input
-              type="input"
-              placeholder="unicorn.inc..."
-              className="search-input"
-            ></input>
+            <li className="nav-item">
+              <div className="input">
+                <input
+                  className="search-input"
+                  type="input"
+                  placeholder="Search UNICORN.INC..."
+                />
+                <i className="fas fa-magnifying-glass"></i>
+              </div>
+            </li>
           </ul>
         </div>
       </div>

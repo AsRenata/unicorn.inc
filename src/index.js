@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './components/NavBar/index.css';
+import './components/NavBar/Navbar.css';
 import App from './App';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

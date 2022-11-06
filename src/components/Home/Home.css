@@ -1,0 +1,111 @@
+.container-hero {
+  width: 100vw;
+  background: linear-gradient(89.89deg, #ffffff 0.08%, #f9f9f9 99.89%);
+  height: calc(100vh - 102px);
+}
+.header-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: +2;
+}
+
+h1 {
+  font-family: "Saira", sans-serif;
+  font-weight: 400;
+  font-size: 15rem;
+  text-transform: uppercase;
+  letter-spacing: 3rem;
+  color: var(--white);
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  opacity: 60%;
+  margin: 0 1rem;
+}
+.hero-items {
+  min-height: 75%;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-end;
+  position: absolute;
+  top: 0;
+}
+h2 {
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 2rem;
+  letter-spacing: 0.4rem;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  margin: 1rem;
+  z-index: +2;
+}
+.icon-box {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  z-index: +2;
+}
+i.fa-facebook-f,
+i.fa-instagram,
+i.fa-envelope {
+  color: var(--black);
+  font-size: 1.5rem;
+  padding: 0.8rem;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  z-index: +3;
+}
+.hero-img {
+  position: absolute;
+  top: 10%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-left: 20rem;
+}
+img.flames {
+  height: 80vh;
+}
+
+@media screen and (max-width: 850px) {
+  h1 {
+    font-size: 3.9rem;
+    letter-spacing: 0.7rem;
+    color: var(--white);
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    opacity: 60%;
+  }
+  .hero-items {
+    width: 100%;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  h2 {
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 0.8rem;
+    letter-spacing: 0.2rem;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    margin-top: 13.5rem;
+  }
+  i.fa-facebook-f,
+  i.fa-instagram,
+  i.fa-envelope {
+    font-size: 1rem;
+    padding: 0 0.5rem;
+  }
+  .hero-img {
+    position: absolute;
+    top: 25%;
+    margin-left: 0;
+  }
+  img.flames {
+    height: 60vh;
+  }
+}
