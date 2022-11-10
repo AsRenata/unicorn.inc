@@ -3,8 +3,6 @@
 }
 nav {
   background: linear-gradient(89.89deg, #ffffff 0.08%, #f9f9f9 99.89%);
-  position: sticky;
-  
 }
 ul {
   list-style-type: none;
@@ -24,6 +22,7 @@ Navbar
   align-items: center;
   justify-content: space-between;
   padding: 1rem;
+  z-index: +1;
 }
 .nav-toggle {
   font-size: 1.2rem;
@@ -97,6 +96,9 @@ i.fas.fa-magnifying-glass:hover {
 }
 
 @media screen and (min-width: 850px) {
+  nav {
+    background: linear-gradient(89.89deg, #ffffff 0.08%, #f9f9f9 99.89%);
+  }
   .logo {
     height: 70px;
   }
@@ -107,6 +109,7 @@ i.fas.fa-magnifying-glass:hover {
     align-items: center;
     justify-content: space-between;
     padding: 1rem;
+    z-index: +5;
   }
   .nav-header {
     padding: 0;

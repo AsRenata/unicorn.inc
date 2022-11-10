@@ -16,23 +16,23 @@
 h1 {
   font-family: "Saira", sans-serif;
   font-weight: 400;
-  font-size: 15rem;
+  font-size: 14rem;
   text-transform: uppercase;
   letter-spacing: 3rem;
   color: var(--white);
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   opacity: 60%;
   margin: 0 1rem;
+  z-index: +5;
 }
 .hero-items {
-  min-height: 75%;
   width: 50%;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
   justify-content: flex-end;
   position: absolute;
-  top: 0;
+  top: 65%;
 }
 h2 {
   text-transform: uppercase;
@@ -71,20 +71,30 @@ img.flames {
 }
 
 @media screen and (max-width: 850px) {
+  .header-container {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 10%;
+  }
   h1 {
     font-size: 3.9rem;
     letter-spacing: 0.7rem;
     color: var(--white);
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     opacity: 60%;
+    z-index: +5;
+    position: relative;
+    padding-bottom: 80px;
   }
   .hero-items {
     width: 100%;
-    min-height: 100%;
+    min-height: 60%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    top: 20%;
   }
   h2 {
     text-transform: uppercase;
@@ -102,10 +112,10 @@ img.flames {
   }
   .hero-img {
     position: absolute;
-    top: 25%;
+    top: 33%;
     margin-left: 0;
   }
   img.flames {
-    height: 60vh;
+    height: 50vh;
   }
 }

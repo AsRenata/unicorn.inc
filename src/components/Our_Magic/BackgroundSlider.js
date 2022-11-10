@@ -1,13 +1,19 @@
 import React, { useState, useEffect } from "react";
 import "./BackgroundSlider.css";
 import imageSlide from "./data";
+import { BsSlash } from "react-icons/bs";
 
 const BackgroundSlider = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
-
+  const bgImageStyle = {
+    backgroundImage: `url(${imageSlide[currentSlide].image})`,
+    backgroundPosition: `center`,
+    backgroundSize: `cover`,
+    height: `100%`,
+  };
   const slideLength = imageSlide.length;
 
-  const autoScroll = true;
+  const autoScroll = false;
   let slideInterval;
   let intervalTime = 6000;
 
@@ -34,19 +40,12 @@ const BackgroundSlider = () => {
   }, [currentSlide]);
   return (
     <div className="slider">
-      <button className="arrow prev" onClick={prevSlide}></button>
-      <button className="arrow next" onClick={nextSlide}></button>
-      <div className="prev-container">
+      <button className="arrow prev" onClick={prevSlide}>
         <i class="fa-solid fa-chevron-left"></i>
-        <i class="fa-slash-forward"></i>
-        <p className="total-no">3</p>
-      </div>
-      <div>
+      </button>
+      <button className="arrow next" onClick={nextSlide}>
         <i class="fa-solid fa-chevron-right"></i>
-        <i class="fa-regular fa-slash-forward"></i>
-        <p className="total-no">3</p>
-      </div>
-
+      </button>
       {imageSlide.map((slide, index) => {
         return (
           <div
@@ -54,18 +53,23 @@ const BackgroundSlider = () => {
             key={index}
           >
             {index === currentSlide && (
-              <>
-                <img src={slide.image} />
-                <div className="project-slide">
-                  <h1 className="project-no">{slide.title}</h1>
+              <div className="carousel">
+                <div style={bgImageStyle}></div>
+                <div>
+                  <button className="prev-btn">
+                    {slide.number}
+                    <BsSlash />
+                    <sub>3</sub>
+                  </button>
                 </div>
-                <div className="project-no-prev">
-                  <button className="prev-btn">{slide.number}</button>
+                <div>
+                  <button className="next-btn">
+                    {slide.number}
+                    <BsSlash />
+                    <sub>3</sub>
+                  </button>
                 </div>
-                <div className="project-no-next">
-                  <button className="next-btn">{slide.number}</button>
-                </div>
-              </>
+              </div>
             )}
           </div>
         );
