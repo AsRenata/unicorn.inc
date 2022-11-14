@@ -1,7 +1,6 @@
-const teamData = [
-  {
-    id: 1,
-    image: "1.jpg",
+export const data = [
+    {id: 1,
+    image: "./dataImages/team1.png",
     name: "Alan Walker",
     text: "Since 2020 Alan has been running the Unicorn.inc. With extensive experience in branding, strategy and marketing, he ensures our client work actually works. As the leading light in our creativity for good pledge, he wants to make a real difference in the world.",
   },
@@ -25,7 +24,7 @@ const teamData = [
   },
   {
     id: 5,
-    image: "2.jpg",
+    image: "./dataImages/team5.png",
     name: "Ross Hooke",
     text: "Passionate, creative, enthusiastic that` words that in the best way describes Ross. Designer with pernament smile on his face and allways ready to help. When Ross is out of working hours, you can found him at football yard teching kids the mastery of a ball.",
   },
@@ -37,10 +36,9 @@ const teamData = [
   },
   {
     id: 7,
-    image: "1.jpg",
+   image: "./dataImages/team7.png",
     name: "Sussie O`Brian",
     text: "Sussie is our numbers person, helping with bookkeeping, invoicing, forecasting and challenging us to think bigger and better. When she`s not crunching the figures, Sussie is also a complementary therapist and ambassador for SunKissed Island, promoting naturally-derived products that are good for the body and the planet.",
-  },
-];
+  }
+  ];
 
-export default teamData;

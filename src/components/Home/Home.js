@@ -4,7 +4,7 @@ import Flames from "./Flames.png";
 
 const Home = () => {
   return (
-    <div className="container-hero">
+    <div className="container-hero" id="home">
       <div className="header-container">
         <h1>unicorn</h1>
       </div>

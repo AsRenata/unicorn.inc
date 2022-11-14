@@ -1,10 +1,17 @@
 import React, { useState, useRef, useEffect } from "react";
 import { links } from "./data";
 import logo from "./logo.png";
+// import { Link } from "react-router-dom";
+import { HashLink as Link } from "react-router-hash-link";
 
 const Navbar = () => {
+  const scrollWithOffset = (el) => {
+    const yCoordinate = el.getBoundingClientRect().top + window.pageYOffset;
+    const yOffset = -80;
+    window.scrollTo({ top: yCoordinate + yOffset, behavior: "smooth" });
+  };
   const [showLinks, setShowLinks] = useState(false);
-  const linksContainerRef = useRef(null); 
+  const linksContainerRef = useRef(null);
   const linksRef = useRef(null);
   const toggleLinks = () => {
     setShowLinks(!showLinks);
@@ -23,12 +30,12 @@ const Navbar = () => {
     <nav>
       <div className="nav-center">
         <div className="nav-header">
-          <img src={logo} className="logo" alt="logo" />
+          <Link smooth to="#home">
+            <img src={logo} className="logo" alt="logo" />
+          </Link>
           <button className="nav-toggle" onClick={toggleLinks}>
             <div className="menu-icon" onClick={handleClick}>
-              <i
-                className={click ? "fas fa-times" : "fas fa-bars"}
-              ></i>
+              <i className={click ? "fas fa-times" : "fas fa-bars"}></i>
             </div>
           </button>
         </div>
@@ -38,7 +45,9 @@ const Navbar = () => {
               const { id, url, text } = link;
               return (
                 <li key={id}>
-                  <a href={url}>{text}</a>
+                  <Link smooth to={url} scroll={(el) => scrollWithOffset(el)}>
+                    {text}
+                  </Link>
                 </li>
               );
             })}

@@ -2,27 +2,27 @@ import React from "react";
 export const links = [
   {
     id: 1,
-    url: "/",
+    url: "#home",
     text: "home",
   },
   {
     id: 2,
-    url: "/about",
+    url: "#about",
     text: "about",
   },
   {
     id: 3,
-    url: "/our_magic",
+    url: "#our_magic",
     text: "our magic",
   },
   {
     id: 4,
-    url: "/team",
+    url: "#team",
     text: "team",
   },
   {
     id: 5,
-    url: "/contact",
+    url: "#contact",
     text: "contact",
   },
 ];

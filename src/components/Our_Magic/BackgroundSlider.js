@@ -39,7 +39,7 @@ const BackgroundSlider = () => {
     }
   }, [currentSlide]);
   return (
-    <div className="slider">
+    <div className="slider" id="our_magic">
       <button className="arrow prev" onClick={prevSlide}>
         <i class="fa-solid fa-chevron-left"></i>
       </button>

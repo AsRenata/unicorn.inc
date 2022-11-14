@@ -6,7 +6,7 @@ import { HiMail } from "react-icons/hi";
 
 const Contact = () => {
   return (
-    <div className="contact-container">
+    <div className="contact-container" id="contact">
       <div className="contact-box">
         <image className="contact-image" />
         <h5>contact</h5>
@@ -53,7 +53,7 @@ const Contact = () => {
             </button>
         </div>
       </div>
-      <a className="back-home" href="#">
+      <a className="back-home" href="/">
         <BsChevronUp />
       </a>
       <footer>
