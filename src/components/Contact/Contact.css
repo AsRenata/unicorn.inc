@@ -127,7 +127,7 @@ button.send:hover{
   font-size: 0.82rem;
 }
 
-@media screen and (max-width: 850px){
+@media screen and (max-width: 950px){
 .contact-container {
   width: 100vw;
   height: 60vh;

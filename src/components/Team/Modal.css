@@ -1,7 +1,7 @@
 .modal-box {
   position: absolute;
   top: 15%;
-  left: 30%;
+  right: 30%;
   width: 65rem;
   height: 33rem;
   display: flex;
@@ -14,24 +14,24 @@
 .close-btn {
   font-size: 1.5rem;
   height: 120%;
-
+  cursor: pointer;
 }
 .close-btn:hover {
   color: var(--orange);
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
-.modal-box h3{
+.modal-box h3 {
   font-size: 1.5rem;
   letter-spacing: 0.3rem;
   margin-bottom: 1rem;
 }
-.modal-box p{
+.modal-box p {
   font-size: 1rem;
   font-weight: 200;
   line-height: 25px;
 }
 
-.modal-desc-box{
+.modal-desc-box {
   margin: 20px;
 }
 .modal-pic-ceo {
@@ -77,4 +77,141 @@
   background-size: 135%;
   height: 600px;
   width: 1400px;
+}
+.carrier-box input {
+  width: 300px;
+}
+.carrier-box .send {
+  width: 110px;
+}
+.carrier-box .send:hover {
+  color: var(--white);
+}
+.carrier-box2 {
+  margin: 0 125px;
+}
+.carrier-box2 h5 {
+  font-size: 1rem;
+  margin-bottom: 0.3rem;
+}
+.carrier-box2 p {
+  margin-bottom: 2rem;
+}
+@media only screen and (max-width: 1550px)  {
+  .modal-box {
+    right: 16%;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .modal-box {
+    position: absolute;
+    top: 4%;
+    left: 10%;
+    width: 80%;
+    height: 41rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 20;
+    background-color: var(--white);
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 20px 30px;
+    padding: 0;
+  }
+  .close-btn {
+    font-size: 1.1rem;
+    height: 5%;
+  }
+  .close-btn:hover {
+    font-size: 1.2;
+    color: var(--orange);
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+  .modal-box h3 {
+    font-size: 1rem;
+    letter-spacing: 0.3rem;
+    margin-bottom: 0rem;
+    padding: 20px 20px 10px 20px;
+  }
+  .modal-box p {
+    font-size: 0.7rem;
+    font-weight: 200;
+    line-height: 20px;
+    padding: 0px 20px;
+  }
+
+  .modal-desc-box {
+    margin: 20px;
+  }
+  .modal-pic-ceo {
+    background: url(./dataImages/team1.png) no-repeat center;
+    background-size: 110%;
+    height: 500px;
+    width: 200px;
+    margin-right: 0px;
+  }
+  .modal-pic-art {
+    background: url(./dataImages/team2.png) no-repeat center;
+    background-size: 110%;
+    height: 500px;
+    width: 200px;
+  }
+
+  .modal-pic-d1 {
+    background: url(./dataImages/team3.png) no-repeat center;
+    background-size: 140%;
+    height: 500px;
+    width: 200px;
+  }
+  .modal-pic-d2 {
+    background: url(./dataImages/team4.png) no-repeat center;
+    background-size: 110%;
+    height: 500px;
+    width: 200px;
+  }
+  .modal-pic-d3 {
+    background: url(./dataImages/team5.png) no-repeat center;
+    background-size: 120%;
+    height: 500px;
+    width: 200px;
+  }
+  .modal-pic-acc {
+    background: url(./dataImages/team6.png) no-repeat center;
+    background-size: 350%;
+    height: 500px;
+    width: 200px;
+  }
+  .modal-pic-accs {
+    background: url(./dataImages/team7.png) no-repeat center;
+    background-size: 135%;
+    height: 500px;
+    width: 200px;
+  }
+  .carrier-box input {
+    width: 270px;
+  }
+  .carrier-box label {
+    font-size: 0.7rem;
+    margin-left: 0.4rem;
+    margin-bottom: 0.2rem;
+  }
+  .carrier-box .send {
+    width: 90px;
+    font-size: 0.6rem;
+    margin-top: 0.6rem;
+    margin-left: 6rem;
+  }
+  .carrier-box .send:hover {
+    color: var(--white);
+  }
+  .carrier-box2 {
+    text-align: center;
+  }
+  .carrier-box2 h5 {
+    font-size: 1rem;
+    margin: 10px 0;
+  }
+  .carrier-box2 p {
+    margin-bottom: 1rem;
+  }
 }

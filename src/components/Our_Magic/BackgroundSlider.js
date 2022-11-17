@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import "./BackgroundSlider.css";
 import imageSlide from "./data";
 import { BsSlash } from "react-icons/bs";
+import { Link } from "react-router-dom";
+
 
 const BackgroundSlider = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -54,7 +56,9 @@ const BackgroundSlider = () => {
           >
             {index === currentSlide && (
               <div className="carousel">
-                <div style={bgImageStyle}></div>
+                <a href="/project_1">
+                  <div style={bgImageStyle}></div>
+                </a>
                 <div>
                   <button className="prev-btn">
                     {slide.number}

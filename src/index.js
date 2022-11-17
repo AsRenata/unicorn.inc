@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './components/NavBar/Navbar.css';
 import App from './App';
-import { BrowserRouter } from "react-router-dom";
+import GlobalStyles from "./GlobalStyles.css";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

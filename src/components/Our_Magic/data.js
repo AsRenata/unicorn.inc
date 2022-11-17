@@ -3,6 +3,7 @@ const imageSlide = [
     id: 1,
     image: "1.jpg",
     number: <sup>1</sup>,
+    url: "project_1",
   },
   {
     id: 2,

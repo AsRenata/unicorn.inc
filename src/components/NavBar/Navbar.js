@@ -1,13 +1,14 @@
 import React, { useState, useRef, useEffect } from "react";
 import { links } from "./data";
 import logo from "./logo.png";
-// import { Link } from "react-router-dom";
-import { HashLink as Link } from "react-router-hash-link";
+import "./Navbar.css";
+import { NavHashLink as Link } from "react-router-hash-link";
+// import {Link} from "react-router-dom"
 
 const Navbar = () => {
   const scrollWithOffset = (el) => {
     const yCoordinate = el.getBoundingClientRect().top + window.pageYOffset;
-    const yOffset = -80;
+    const yOffset = -90;
     window.scrollTo({ top: yCoordinate + yOffset, behavior: "smooth" });
   };
   const [showLinks, setShowLinks] = useState(false);
@@ -30,7 +31,7 @@ const Navbar = () => {
     <nav>
       <div className="nav-center">
         <div className="nav-header">
-          <Link smooth to="#home">
+          <Link smooth to="/#">
             <img src={logo} className="logo" alt="logo" />
           </Link>
           <button className="nav-toggle" onClick={toggleLinks}>
@@ -45,7 +46,12 @@ const Navbar = () => {
               const { id, url, text } = link;
               return (
                 <li key={id}>
-                  <Link smooth to={url} scroll={(el) => scrollWithOffset(el)}>
+                  <Link
+                    smooth
+                    to={url}
+                    scroll={(el) => scrollWithOffset(el)}
+                    // activeClassName="selected"
+                  >
                     {text}
                   </Link>
                 </li>

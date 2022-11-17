@@ -15,7 +15,7 @@ const Team = () => {
   const [openModalD3, setOpenModalD3] = useState(false);
   const [openModalAccount, setOpenModalAccount] = useState(false);
   const [openModalAccounts, setOpenModalAccounts] = useState(false);
-
+const [openModalCarrier, setOpenModalCarrier] = useState(false);
   return (
     <div className="team-container" id="team">
       <div className="team-header-container">
@@ -212,7 +212,7 @@ const Team = () => {
             setOpenModalAccounts(true);
           }}
         >
-          acounts
+          accounts
         </button>
         {openModalAccounts && (
           <div className="modal-box">
@@ -230,12 +230,61 @@ const Team = () => {
               </p>
             </div>
             <div className="modal-pic-accs"></div>
-            <i className="close-btn" onClick={() => setOpenModalAccounts(false)}>
+            <i
+              className="close-btn"
+              onClick={() => setOpenModalAccounts(false)}
+            >
               <MdOutlineClose />
             </i>
           </div>
         )}
-        <button className="work-with box">work with us</button>
+        <button
+          className="work-with box"
+          onClick={() => {
+            setOpenModalCarrier(true);
+          }}
+        >
+          work with us
+        </button>
+        {openModalCarrier && (
+          <div className="modal-box">
+            <div className="carrier-box">
+              <h3>
+                INTRODUCE <span>YOURSELF</span>
+              </h3>
+              <form>
+                <label for="name">Name *</label> <br />
+                <input type="text" id="name"></input> <br />
+                <br />
+                <label for="email">E-mail *</label>
+                <br />
+                <input type="email" id="email"></input>
+                <br />
+                <br />
+                <label for="phone">Phone number </label>
+                <br />
+                <input type="phone" id="phone"></input> <br />
+                <br />
+                <label for="text">A bit more details </label>
+                <br />
+                <input type="phone" id="phone"></input>
+                <br />
+                <button type="submit" className="send">
+                  LET`S TALK
+                </button>
+              </form>
+            </div>
+            <div className="carrier-box2">
+              <h5>UNICORN.INC</h5>
+              <p>unicorn@inc.com</p>
+              <h5>Vilnius, Lithuania</h5>
+              <p>7 Unicorn Hall <br/> Wonderland Park <br/> LT-01111 </p>
+            </div>
+            <i className="close-btn" onClick={() => setOpenModalCarrier(false)}>
+              <MdOutlineClose />
+            </i>
+          </div>
+        )}
       </div>
     </div>
   );

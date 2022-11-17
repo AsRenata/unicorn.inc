@@ -82,7 +82,83 @@ p.quote {
   font-style: italic;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 1320px) {
+  .about-img {
+    height: 450px;
+  }
+  .first-header {
+    height: 130px;
+    display: flex;
+    align-items: flex-end;
+    padding-left: 5rem;
+  }
+  .second-header {
+    height: 190px;
+    display: flex;
+    align-items: flex-end;
+    padding-left: 4rem;
+    
+  }
+  h3 {
+    font-family: "Saira", sans-serif;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 2rem;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    line-height: 40px;
+    letter-spacing: 0.1rem;
+  }
+  .solid-line {
+    height: 3px;
+    width: 100%;
+    background-color: var(--black);
+    margin-bottom: 2rem;
+    margin-top: 23px;
+  }
+  .second-section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  h4 {
+    text-transform: uppercase;
+    font-size: 2rem;
+    letter-spacing: 0.2rem;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    -webkit-text-stroke: 1px rgb(0, 0, 0);
+    color: var(--white);
+    margin-bottom: 1.5rem;
+    padding-left: 1.5rem;
+  }
+  h4.align-right-header {
+    text-align: right;
+    padding-right: 2rem;
+  }
+  p.align-right-text {
+    text-align: right;
+    padding-right: 2rem;
+  }
+  p {
+    font-family: "Saira", sans-serif;
+    font-weight: 100;
+    font-size: 1rem;
+    letter-spacing: 0.1rem;
+    padding-left: 1.5rem;
+  }
+  .quote-box {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  p.quote {
+    font-weight: 500;
+    font-style: italic;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    text-align: center;
+    margin: 0 1rem;
+  }
+}
+@media screen and (max-width: 950px) {
   .upper-box {
     width: 100%;
     display: flex;

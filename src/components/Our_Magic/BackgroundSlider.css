@@ -139,7 +139,7 @@ i.fa-solid.fa-chevron-left {
   opacity: 100%;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 950px) {
   .slider {
     height: 50vh;
   }

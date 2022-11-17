@@ -3,6 +3,7 @@ import "./Contact.css";
 import { FaLocationArrow } from "react-icons/fa";
 import { BsTelephoneFill, BsChevronUp } from "react-icons/bs";
 import { HiMail } from "react-icons/hi";
+import { HashLink as Link } from "react-router-hash-link";
 
 const Contact = () => {
   return (
@@ -29,36 +30,34 @@ const Contact = () => {
           </div>
         </div>
         <div className="right-box">
+          <form>
             <div className="input-box">
               <p>
-                <input class="type-name" type="text" placeholder="Name" />
+                <input type="text" placeholder="Name" />
               </p>
-
               <p>
                 <input
-                  class="type-email"
-                  type="mail"
+                  type="email"
                   id="email"
                   placeholder="Email"
                 />
               </p>
             </div>
-
             <p>
-              <input class="message" type="text" placeholder="Message" />
+              <input className="message" type="text" placeholder="Message" />
             </p>
-
             <button type="submit" className="send">
               Send
             </button>
+          </form>
         </div>
       </div>
-      <a className="back-home" href="/">
-        <BsChevronUp />
-      </a>
-      <footer>
-        Copyright © UNICORN.INC 2022. All Rights Reserved.
-      </footer>
+      <Link smooth to="/#">
+        <a className="back-home">
+          <BsChevronUp />
+        </a>
+      </Link>
+      <footer>Copyright © UNICORN.INC 2022. All Rights Reserved.</footer>
     </div>
   );
 };

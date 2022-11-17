@@ -4,7 +4,7 @@
 nav {
   background: linear-gradient(89.89deg, #ffffff 0.08%, #f9f9f9 99.89%);
   position: sticky;
-  top: 0 !important;
+  top: 0% !important;
   z-index: +50;
 }
 ul {
@@ -72,7 +72,10 @@ Navbar
 }
 div.input {
   height: 3rem;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
 }
 i.fas.fa-magnifying-glass {
   color: var(--black);
@@ -97,8 +100,14 @@ i.fas.fa-magnifying-glass:hover {
     rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
   opacity: 60%;
 }
+.selected {
+  color: var(--orange);
+  font-size: 0.85rem;
+  letter-spacing: 0.3rem;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
 
-@media screen and (min-width: 850px) {
+@media screen and (min-width: 950px) {
   nav {
     background: linear-gradient(89.89deg, #ffffff 0.08%, #f9f9f9 99.89%);
     position: sticky;
@@ -109,12 +118,12 @@ i.fas.fa-magnifying-glass:hover {
     height: 70px;
   }
   .nav-center {
-    max-width: 1500px;
+    max-width: 1320px;
     margin: 0 auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 1rem;
+    padding: 0.5rem 1rem;
     z-index: +5;
   }
   .nav-header {
